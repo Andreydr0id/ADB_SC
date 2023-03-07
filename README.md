@@ -31,33 +31,6 @@ brew install android-platform-tools
 ```
 
 
-### Install Scrcpy
-
-**Install Scrcpy on Debian**
-```sh
-sudo apt install scrcpy
-```
-
-**Install Scrcpy on Fedora**
-```sh
-dnf copr enable zeno/scrcpy
-```
-
-```sh
-dnf install scrcpy
-```
-
-**Install Scrcpy on Arch Linux**
-```sh
-pacman -S scrcpy
-```
-
-**Install Scrcpy on MacOS**
-```sh
-brew install scrcpy 
-```
-
-## Special thanks
-https://github.com/Genymobile/scrcpy
+## Special thanks:
 
 https://developer.android.com/studio/command-line/adb
