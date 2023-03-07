@@ -7,5 +7,4 @@ notify-send "ADB_SC" "Failed to get ip"
 else
 adb connect $ipadr:5555 # подключение телефона через TCP
 notify-send "ADB_SC" "Success"
-scrcpy --stay-awake --serial=$ipadr:5555
 fi
