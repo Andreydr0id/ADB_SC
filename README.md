@@ -6,6 +6,6 @@
 - scrcpy(optional)
 
 ### Special thanks:
-- https://github.com/anqude for write this shit \
-- https://developer.android.com/studio/command-line/adb \
+- https://github.com/anqude for write this shit 
+- https://developer.android.com/studio/command-line/adb 
 - https://github.com/Genymobile/scrcpy
