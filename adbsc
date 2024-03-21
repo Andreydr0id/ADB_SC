@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 port='5555'
 scrs=false
 while getopts 'shp:' flag; do
@@ -12,10 +12,10 @@ adb kill-server # убиваем серевер ADB
 adb tcpip $port && sleep 3 # изменяем порт ADB
 ipadr=$(adb shell ip -o a | grep "wlan0" | head -n1 | awk '{print $4}' | awk '{ print substr($1, 1, length($1)-3) '}) # получаем IP
 if [[ $ipadr == "" ]]; then # проверяем на ошибку получения IP
-notify-send "ADB_SC" "Failed to get ip" # оповещаем об ошибке получения IP
+notify-send "adb_sc" "Failed to get IP" # оповещаем об ошибке получения IP
 else
 adb connect $ipadr:$port # подключаем телефон через TCP
-notify-send "ADB_SC" "Success" # оповещаем об успехе
+notify-send "adb_sc" "Success, connected to $ipadr:$port" # оповещаем об успехе
 if [[ "$scrs" == true ]];then
 scrcpy --stay-awake --serial=$ipadr:$port
 fi
